@@ -1,0 +1,150 @@
+.calc {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #12304f;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+}
+
+.calc h2 {
+  margin-bottom: 14px;
+  font-size: 1.25rem;
+}
+
+.calc-grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-form label,
+.calc-unidade {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.calc-unidade {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding: 0;
+  border: 0;
+}
+
+.calc-unidade legend {
+  width: 100%;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.calc-unidade label {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+}
+
+.calc-opcional {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #5b7189;
+}
+
+.calc input[type="text"],
+.calc input:not([type]) {
+  padding: 8px 10px;
+  font-size: 1rem;
+  color: #12304f;
+  background: #fff;
+  border: 1px solid #7e97b3;
+  border-radius: 8px;
+}
+
+.calc input:focus-visible {
+  outline: 2px solid #3f6a9f;
+  outline-offset: 1px;
+}
+
+.calc button {
+  padding: 7px 14px;
+  font-size: 0.9rem;
+  color: #12304f;
+  background: #fff;
+  border: 1px solid #12304f;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.calc-limpar {
+  align-self: flex-start;
+}
+
+.calc-saida {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calc-resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calc-resultados div {
+  padding: 8px 12px;
+  background: #eaf3fc;
+  border-left: 4px solid #3f6a9f;
+  border-radius: 6px;
+}
+
+.calc-resultados dt {
+  font-size: 0.8rem;
+  color: #455d78;
+}
+
+.calc-resultados dd strong {
+  font-size: 1.35rem;
+}
+
+.calc-resultados small {
+  margin-left: 10px;
+  color: #455d78;
+}
+
+.calc-erro {
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #7a1b1b;
+  background: #fbe4e4;
+  border-radius: 6px;
+}
+
+.calc-vazio {
+  color: #455d78;
+}
+
+.calc-copiar {
+  align-self: flex-start;
+}
+
+.calc-aviso {
+  font-size: 0.75rem;
+  color: #455d78;
+}
+
+@media (max-width: 640px) {
+  .calc-grade {
+    grid-template-columns: 1fr;
+  }
+}
