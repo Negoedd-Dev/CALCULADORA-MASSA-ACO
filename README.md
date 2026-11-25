@@ -1,16 +1,55 @@
-# React + Vite
+# Calculadora de massa de tubo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Calcula a massa teórica de tubos de aço sem costura a partir do diâmetro externo, da espessura de parede e do comprimento, com as tolerâncias e o efeito de um recorte.
 
-Currently, two official plugins are available:
+![Tela da calculadora](docs/tela.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Demo:** _(https://calculadora-massa-aco.vercel.app/)_
 
-## React Compiler
+## Por que criei
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Trabalho como inspetor de qualidade em uma empresa que atua nos setores de: petróleo e gás, energia, indústria, automotivo e construção, produzindo tubos de aço sem costura. No dia a dia é comum precisar estimar a massa de um tubo e saber quanto ela muda quando uma parte é cortada para ajustar o tamanho ou remover um defeito. Criei esta calculadora para fazer isso de forma rápida e conferível. Também faz parte dos meus estudos de desenvolvimento web com React.
 
-## Expanding the Oxlint configuration
+## O que ele faz
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Massa por metro e massa total do tubo, em kg e em lb/ft.
+- Faixas mínima e máxima a partir das tolerâncias de diâmetro, parede e comprimento.
+- Massa do trecho removido e massa restante após um recorte.
+
+## Como calcula
+
+```
+massa por metro (kg/m) = π · t · (OD − t) · ρ / 1000
+```
+
+- `OD`: diâmetro externo (mm)
+- `t`: espessura de parede (mm)
+- `ρ`: densidade do aço, 7,85 g/cm³
+- Conversão: 1 kg/m = 0,671969 lb/ft
+
+## Tecnologias
+
+React, Vite, JavaScript, CSS
+
+## Como rodar
+
+Requisito: [Node.js](https://nodejs.org) 18 ou superior.
+
+```bash
+git clone https://github.com/Negoedd-Dev/calculadora-massa
+cd calculadora-massa
+npm install
+npm run dev
+```
+
+Abra o endereço que aparecer no terminal (normalmente http://localhost:5173).
+Sem o Git, baixe o ZIP pelo botão verde **Code** desta página.
+
+## Observações
+
+- É uma massa **teórica**, calculada pela geometria nominal e pela densidade informada. Não substitui a pesagem real.
+- Os valores de exemplo são fictícios e não representam nenhuma norma ou cliente específico.
+
+## Autor
+
+Negoedd · [LinkedIn](https://www.linkedin.com/in/edson-nunes)
